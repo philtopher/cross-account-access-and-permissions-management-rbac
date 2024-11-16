@@ -42,7 +42,7 @@ aws-sso-access-management/
 │       └── outputs.tf           # Outputs for account assignment module
 └── README.md                    # Documentation for the setup
 ```
-<b>
+<br>
 Root Module (main.tf)
 The main.tf file imports the sub-modules for managing users, groups, permissions, and account assignments. It initializes the AWS provider and handles orchestration of resources across all modules.
 
@@ -159,6 +159,7 @@ resource "aws_ssoadmin_account_assignment" "example" {
   target_id          = "target_account_id"
   target_type        = "AWS_ACCOUNT"
 }
+<br>
 Output Variables
 The module outputs certain values that you can use in other Terraform configurations or external tools. Some of the key outputs include:
 
@@ -166,7 +167,7 @@ permission_set_arns: ARN of the permission sets.
 user_ids: List of user IDs created in the Identity Store.
 group_ids: List of group IDs created for user membership.
 
-Conclusion
+Conclusion: <br>
 This Terraform module provides an automated and scalable way to manage AWS SSO users, groups, permissions, and account assignments. By structuring the code into modules, you can reuse the configuration across multiple environments and AWS accounts, while maintaining flexibility and ease of management.
 
 Feel free to extend the module to include additional features like multi-account support, dynamic permission set creation, and more!
