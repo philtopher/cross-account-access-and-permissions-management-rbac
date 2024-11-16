@@ -19,6 +19,7 @@ account_assignment: Manages account and OU assignments for groups.
 Architecture
 This setup is divided into multiple files and sub-modules to maintain clean code and modularity.
 
+```markdown
 File Structure
 
 aws-sso-access-management/
@@ -40,6 +41,8 @@ aws-sso-access-management/
 │       ├── main.tf              # Account and OU assignment resources
 │       └── outputs.tf           # Outputs for account assignment module
 └── README.md                    # Documentation for the setup
+```
+<b>
 Root Module (main.tf)
 The main.tf file imports the sub-modules for managing users, groups, permissions, and account assignments. It initializes the AWS provider and handles orchestration of resources across all modules.
 
